@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 193359669}
   - component: {fileID: 193359668}
   - component: {fileID: 193359667}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cubo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 418231481}
   - component: {fileID: 418231480}
   - component: {fileID: 418231479}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cubo (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -327,7 +327,7 @@ GameObject:
   - component: {fileID: 529579436}
   - component: {fileID: 529579435}
   - component: {fileID: 529579434}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Piso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -517,7 +517,7 @@ GameObject:
   - component: {fileID: 727857066}
   - component: {fileID: 727857065}
   - component: {fileID: 727857064}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cubo (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -710,7 +710,6 @@ GameObject:
   - component: {fileID: 1538712639}
   - component: {fileID: 1538712642}
   - component: {fileID: 1538712641}
-  - component: {fileID: 1538712640}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -732,20 +731,6 @@ Transform:
   m_Father: {fileID: 2026289187}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1538712640
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1538712638}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &1538712641
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -805,7 +790,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1586007148}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ambiente
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -843,7 +828,7 @@ GameObject:
   - component: {fileID: 1846393109}
   - component: {fileID: 1846393108}
   - component: {fileID: 1846393107}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cubo (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -927,6 +912,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846393105}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1929767973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1929767974}
+  m_Layer: 0
+  m_Name: "Verificador de Ch\xE3o"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1929767974
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929767973}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2026289187}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2026289185
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,6 +991,7 @@ Transform:
   m_Children:
   - {fileID: 963194228}
   - {fileID: 1538712639}
+  - {fileID: 1929767974}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -993,3 +1009,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oCharacterController: {fileID: 2026289186}
   velocidadeDoJogador: 12
+  alturaDoPuloDoJogador: 3
+  gravidadeDoJogador: -20
+  verificadorDeChao: {fileID: 1929767974}
+  alcanceDoVerificador: 0.5
+  layerDoChao:
+    serializedVersion: 2
+    m_Bits: 64
